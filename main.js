@@ -29,6 +29,7 @@ const getAllPosts = async () => {
 // Use Fetch with Async/Await to request
 // all the posts. The function should
 // return all the posts as JSON data.
+
 const getAllUsers = async () => {
   const response = await fetch("https://jsonplaceholder.typicode.com/users");
   const jsonData = await response.json();
@@ -44,6 +45,7 @@ const getAllUsers = async () => {
 // The function should return all the
 // comments for the requested postID
 // as JSON data.
+
 const getComments = async (postID) => {
   const response = await fetch(
     `https://jsonplaceholder.typicode.com/posts/${postID}/comments`
@@ -51,12 +53,14 @@ const getComments = async (postID) => {
   const jsonData = await response.json();
   return jsonData;
 };
+
 // 4) Create a function named "getUser".
 // This function needs to accept a "userID"
 // parameter.
 // Use Fetch with Async/Await to request
 // the data for the requested user.
 // The function should return JSON data.
+
 const getUser = async (userID) => {
   const response = await fetch(
     `https://jsonplaceholder.typicode.com/posts/${userID}/comments`
@@ -64,12 +68,14 @@ const getUser = async (userID) => {
   const jsonData = await response.json();
   return jsonData;
 };
+
 // 5) Create a function named "getTodosForUser".
 // This function needs to accept a "userID"
 // parameter.
 // Use Fetch with Async/Await to request
 // all of the todos for the requested user.
 // The function should return JSON data.
+
 const getTodosForUser = async (userID) => {
   const response = await fetch(
     `https://jsonplaceholder.typicode.com/posts/${userID}/todos`
